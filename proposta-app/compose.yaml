@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "123"
+      POSTGRES_USER: "postgress"
+      POSTGRES_DB: "propostadb"
+    ports:
+      - "5433:5432"
+    volumes:
+      - proposta-db:/var/lib/postgresql/data
+  rabbitmq:
+    image: rabbitmq:3.12.14-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+
+volumes:
+  proposta-db:
