@@ -1,4 +1,4 @@
-package com.vitor.analisecredito;
+package com.vitor.analisecredito.service;
 
 import com.vitor.analisecredito.entity.Proposta;
 

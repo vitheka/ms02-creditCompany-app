@@ -1,8 +1,7 @@
 package com.vitor.analisecredito.service;
 
-import com.vitor.analisecredito.CaculoPonto;
-import com.vitor.analisecredito.StrategyException;
 import com.vitor.analisecredito.entity.Proposta;
+import com.vitor.analisecredito.exception.StrategyException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +16,7 @@ public class AnaliseCreditoService {
 
     public final List<CaculoPonto> caculoPontoList;
     public final NotificacaoRabbitService notificacaoRabbitService;
+
 
     @Value("${rabbitmq.propostaconcluida.exchange}")
     private String exchangePropostaConcluida;

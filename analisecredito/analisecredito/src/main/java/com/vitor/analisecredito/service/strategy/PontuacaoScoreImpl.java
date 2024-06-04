@@ -1,7 +1,7 @@
 package com.vitor.analisecredito.service.strategy;
 
-import com.vitor.analisecredito.CaculoPonto;
-import com.vitor.analisecredito.StrategyException;
+import com.vitor.analisecredito.service.CaculoPonto;
+import com.vitor.analisecredito.exception.StrategyException;
 import com.vitor.analisecredito.entity.Proposta;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
