@@ -1,0 +1,17 @@
+spring:
+  rabbitmq:
+    host: 'localhost'
+    port: 5672
+    username: 'guest'
+    password: 'guest'
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+
+rabbitmq:
+  propostapendente:
+    queue: 'proposta-pendente.ms-analise-credito'
+  propostaconcluida:
+    exchange: 'proposta-concluida.ex'
